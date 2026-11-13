@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#090A0F"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:gravity="center_horizontal">
+
+        <!-- ترويسة التطبيق -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="𓆩 𝑵𝑬𝑿𝑶 𓆪 GAME BOOSTER"
+            android:textColor="#FF2A54"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="مُحسّن الأداء وحرارة الجهاز للألعاب الثقيلة"
+            android:textColor="#8E92A4"
+            android:textSize="12sp"
+            android:layout_marginBottom="24dp" />
+
+        <!-- بطاقة استهلاك الذاكرة (RAM) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#131520"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="استهلاك الذاكرة العشوائية (RAM)"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvRamPercent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textColor="#FF2A54"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/pbRam"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="8dp"
+                android:max="100"
+                android:progress="50"
+                android:progressTint="#FF2A54"
+                android:progressBackgroundTint="#252838" />
+
+            <TextView
+                android:id="@+id/tvRamDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="المستخدم: -- GB / الكلي: -- GB"
+                android:textColor="#8E92A4"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- بطاقة حرارة المعالج والبطارية -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#131520"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="حرارة الجهاز التقريبية"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTemp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-- °C"
+                android:textColor="#00E5FF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- زر التسريع العملاق -->
+        <Button
+            android:id="@+id/btnBoost"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:text="BOOST\nتسريع الآن"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="#FF2A54" />
+
+        <!-- رسالة الحالة -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="الجهاز جاهز للتسريع وتحرير الذاكرة"
+            android:textColor="#10B981"
+            android:textSize="13sp"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+</ScrollView>
